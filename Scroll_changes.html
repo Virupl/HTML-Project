@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scroll</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        scroll-snap-type: y mandatory;
+      }
+      .container .section {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-blend-mode: multiply;
+        scroll-snap-align: start;
+      }
+      .container .section:nth-child(1) {
+        background-attachment: fixed;
+        background-size: cover;
+        background: #f00 url(./Images/Bg1.jpg);
+      }
+      .container .section:nth-child(2) {
+        background-attachment: fixed;
+        background-size: cover;
+        background: #0f0 url(./Images/Bg2.jpg) no-repeat;
+      }
+      .container .section:nth-child(3) {
+        background-attachment: fixed;
+        background-size: cover;
+        background: #ff0 url(./Images/Bg3.jpg);
+      }
+      .container .section:nth-child(4) {
+        background-attachment: fixed;
+        background-size: cover;
+        background: #f0f url(./Images/Bg4.jpg);
+      }
+      .container .section:nth-child(5) {
+        background-attachment: fixed;
+        background-size: cover;
+        background: #00f url(./Images/Bg5.jpg);
+      }
+      .container .section .content {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        max-width: 700px;
+      }
+      .section .content h2 {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="section">
+        <div class="content">
+          <h2>Section One Title</h2>
+          <p>
+            A paragraph is a self-contained unit of discourse in writing dealing
+            with a particular point or idea. A paragraph consists of one or more
+            sentences. Though not required by the syntax of any language,
+            paragraphs are usually an expected part of formal writing, used to
+            organize longer prose.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Two Title</h2>
+          <p>
+            A paragraph is a self-contained unit of discourse in writing dealing
+            with a particular point or idea. A paragraph consists of one or more
+            sentences. Though not required by the syntax of any language,
+            paragraphs are usually an expected part of formal writing, used to
+            organize longer prose.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Three Title</h2>
+          <p>
+            A paragraph is a self-contained unit of discourse in writing dealing
+            with a particular point or idea. A paragraph consists of one or more
+            sentences. Though not required by the syntax of any language,
+            paragraphs are usually an expected part of formal writing, used to
+            organize longer prose.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Four Title</h2>
+          <p>
+            A paragraph is a self-contained unit of discourse in writing dealing
+            with a particular point or idea. A paragraph consists of one or more
+            sentences. Though not required by the syntax of any language,
+            paragraphs are usually an expected part of formal writing, used to
+            organize longer prose.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Five Title</h2>
+          <p>
+            A paragraph is a self-contained unit of discourse in writing dealing
+            with a particular point or idea. A paragraph consists of one or more
+            sentences. Though not required by the syntax of any language,
+            paragraphs are usually an expected part of formal writing, used to
+            organize longer prose.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

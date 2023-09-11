@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cigarate</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #000;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 30px;
+        transform-style: preserve-3d;
+        transform: rotate(0deg);
+      }
+
+      .container .cigarate {
+        transform-style: preserve-3d;
+        animation: cigarate 10s linear infinite;
+      }
+
+      @keyframes cigarate {
+        0% {
+          transform: perspective(1000px) rotateX(0deg);
+        }
+        100% {
+          transform: perspective(1000px) rotateX(360deg);
+        }
+      }
+
+      .container .cigarate span {
+        position: absolute;
+        color: #ffffff;
+        font-size: 1.35em;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 0.76em;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+        transform: translate(-50%, -50%) rotateX(calc(var(--i) * 36deg))
+          translateZ(25px);
+        background-color: rgba(0, 0, 0, 0.25);
+        transform-style: preserve-3d;
+      }
+
+      .container .cigarate span i {
+        font-style: normal;
+        color: #f00;
+      }
+
+      .container .cigarate span i:first-child::after {
+        content: "l";
+        color: #ffffff;
+        text-transform: lowercase;
+      }
+
+      .container .cigarate span i:last-child {
+        color: #f00;
+        filter: blur(2px);
+        text-shadow: -4px 0 2px #000, 8px 0 20px #f00, 8px 0 24px #f00,
+          8px 0 0 #222, 12px 0 #555, 16px 0 #666, 20px 0 #888, 24px 0 #999;
+      }
+      .vapour {
+        display: flex;
+        position: relative;
+        padding: 0 20px;
+        z-index: 1;
+        transform: rotate(180deg);
+      }
+      .vapour span {
+        display: block;
+        position: relative;
+        right: 140px;
+        top: 10px;
+        margin: 0 1px 50px;
+        min-width: 3px;
+        height: 50px;
+        background: #f00;
+        border-radius: 50%;
+        animation: animate 4s linear infinite;
+        opacity: 0;
+        filter: blur(5px);
+        animation-delay: calc(var(--i) * -0.9s);
+      }
+      @keyframes animate {
+        0% {
+          transform: translateY(0) scaleX(1);
+        }
+        15% {
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(150px) scaleX(10);
+        }
+        95% {
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(300px) scaleX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cigarate">
+        <span style="--i: 1"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 2"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 3"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 4"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 5"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 6"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 7"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 8"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 9"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+        <span style="--i: 10"><i>Noooooo</i>Smoooooooooking<i>|</i></span>
+      </div>
+      <div class="vapour">
+        <span style="--i: 1"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 6"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 10"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 9"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 8"></span>
+      </div>
+    </div>
+  </body>
+</html>

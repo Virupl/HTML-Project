@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>location</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+body{
+  background: #EC7063;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container
+{
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 30%;
+}
+button
+{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  background: #515A5A;
+  border-radius: 10px;
+}
+button:active
+{
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1 class="location-display">Location:-</h1>
+<button class="Get-btn" >Get Your Location</button>
+</div>
+
+
+<script type="text/javascript">
+
+const GetBtn = document.querySelector(".Get-btn");
+const locationDisplay = document.querySelector(".location-display");
+
+GetBtn.addEventListener("click", () => {
+
+   axios.get("https://ipapi.co/json/").then((response) => {
+       locationDisplay.textContent = `Location:- ${response.data.city}`;
+   });
+});
+
+</script>
+</body>
+</head>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>---</title>
+<style type="text/css">
+body 
+{
+   min-height: 200vh;
+   background-image: linear-gradient(to right bottom, green, orange);
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
+span
+{
+   width: 0px;
+   height: 35px;
+   position:absolute;
+   background:transparent;
+   opacity: 0;
+   border-right: 2px solid #222;
+   transform:rotate(calc(var(--i) * (360deg / 30))) translate(1px);
+   transform-origin: 0 100px;
+   animation: circle 1.4s infinite linear;
+   animation-delay: calc(var(--i) * 0.05s);
+}
+.section-2 span
+{
+   width: 5px;
+   height: 5px;
+   position:absolute;
+   background:#222;
+   opacity: 0;
+   border-radius: 50%;
+   transform:rotate(calc(var(--i) * (360deg / 30))) translate(1px);
+   transform-origin: 0 100px;
+   animation: circle 1.4s infinite linear;
+   animation-delay: calc(var(--i) * 0.05s);
+}
+.section-3 span
+{
+   width: 20px;
+   height: 20px;
+   position:absolute;
+   background:transparent;
+   opacity: 0;
+   border-radius: 50%;
+   border-right: 5px solid #222;
+   border-bottom: 5px solid #222;
+   transform:rotate(calc(var(--i) * (360deg / 30))) translate(50px);
+   transform-origin: 0 100px;
+   animation: circle 1.4s infinite linear;
+   animation-delay: calc(var(--i) * 0.05s);
+}
+@keyframes circle
+{
+   0% { opacity: 1;}
+   100%{ opacity: 0;}
+}
+</style>
+</head>
+<body>
+
+<section>
+  <span style="--i:1;" ></span>
+  <span style="--i:2;"></span>
+  <span style="--i:3;"></span>
+  <span style="--i:4;"></span>
+  <span style="--i:5;"></span>
+  <span style="--i:6;"></span>
+  <span style="--i:7;"></span>
+  <span style="--i:8;"></span>
+  <span style="--i:9;"></span>
+  <span style="--i:10;"></span>
+  <span style="--i:11;"></span>
+  <span style="--i:12;"></span>
+  <span style="--i:13;"></span>
+  <span style="--i:14;"></span>
+  <span style="--i:15;"></span>
+  <span style="--i:16;" ></span>
+  <span style="--i:17;"></span>
+  <span style="--i:18;"></span>
+  <span style="--i:19;"></span>
+  <span style="--i:20;"></span>
+  <span style="--i:21;"></span>
+  <span style="--i:22;"></span>
+  <span style="--i:23;"></span>
+  <span style="--i:24;"></span>
+  <span style="--i:25;"></span>
+  <span style="--i:26;"></span>
+  <span style="--i:27;"></span>
+  <span style="--i:28;"></span>
+  <span style="--i:29;"></span>
+  <span style="--i:30;"></span>
+</section>
+
+<section class="section-2" >
+  <span style="--i:1;" ></span>
+  <span style="--i:2;"></span>
+  <span style="--i:3;"></span>
+  <span style="--i:4;"></span>
+  <span style="--i:5;"></span>
+  <span style="--i:6;"></span>
+  <span style="--i:7;"></span>
+  <span style="--i:8;"></span>
+  <span style="--i:9;"></span>
+  <span style="--i:10;"></span>
+  <span style="--i:11;"></span>
+  <span style="--i:12;"></span>
+  <span style="--i:13;"></span>
+  <span style="--i:14;"></span>
+  <span style="--i:15;"></span>
+  <span style="--i:16;" ></span>
+  <span style="--i:17;"></span>
+  <span style="--i:18;"></span>
+  <span style="--i:19;"></span>
+  <span style="--i:20;"></span>
+  <span style="--i:21;"></span>
+  <span style="--i:22;"></span>
+  <span style="--i:23;"></span>
+  <span style="--i:24;"></span>
+  <span style="--i:25;"></span>
+  <span style="--i:26;"></span>
+  <span style="--i:27;"></span>
+  <span style="--i:28;"></span>
+  <span style="--i:29;"></span>
+  <span style="--i:30;"></span>
+</section>
+
+<section class="section-3" >
+  <span style="--i:1;" ></span>
+  <span style="--i:2;"></span>
+  <span style="--i:3;"></span>
+  <span style="--i:4;"></span>
+  <span style="--i:5;"></span>
+  <span style="--i:6;"></span>
+  <span style="--i:7;"></span>
+  <span style="--i:8;"></span>
+  <span style="--i:9;"></span>
+  <span style="--i:10;"></span>
+  <span style="--i:11;"></span>
+  <span style="--i:12;"></span>
+  <span style="--i:13;"></span>
+  <span style="--i:14;"></span>
+  <span style="--i:15;"></span>
+  <span style="--i:16;" ></span>
+  <span style="--i:17;"></span>
+  <span style="--i:18;"></span>
+  <span style="--i:19;"></span>
+  <span style="--i:20;"></span>
+  <span style="--i:21;"></span>
+  <span style="--i:22;"></span>
+  <span style="--i:23;"></span>
+  <span style="--i:24;"></span>
+  <span style="--i:25;"></span>
+  <span style="--i:26;"></span>
+  <span style="--i:27;"></span>
+  <span style="--i:28;"></span>
+  <span style="--i:29;"></span>
+  <span style="--i:30;"></span>
+</section>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

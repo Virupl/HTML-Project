@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Hover</title>
+<style type="text/css">
+body
+{
+   display:grid;
+   justify-content: center;
+   align-items: center;
+   min-height: 90vh;
+   background: #222;
+}
+.box button
+{
+   width: 200px;
+   height: 70px;
+   border: 2px solid #fff;
+   color: #fff;
+   font-size: 20px;
+   font-weight: bold;
+   background:transparent;
+   position:relative;
+}
+.box button:before
+{
+   content: '';
+   position:absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+.box button:hover:before
+{
+   background: #f0f;
+   box-shadow: inset 0 0 5px 20px #f0f;
+   animation: waves 2s linear infinite;
+}
+@keyframes waves
+{
+  0%{
+      clip-path: polygon(58% 98%, 66% 99%, 82% 99%, 95% 95%, 100% 100%, 51% 100%, 0 100%, 8% 96%, 18% 97%, 34% 99%);
+  }
+  10%{
+      clip-path: polygon(59% 95%, 68% 92%, 84% 94%, 98% 94%, 100% 100%, 47% 100%, 0 100%, 7% 93%, 19% 94%, 34% 92%);
+  }
+  20%{
+      clip-path: polygon(54% 88%, 70% 84%, 87% 87%, 100% 82%, 100% 100%, 47% 100%, 0 100%, 6% 86%, 19% 92%, 32% 85%);
+  }
+  30%{
+      clip-path: polygon(44% 78%, 70% 81%, 80% 72%, 97% 66%, 100% 100%, 47% 100%, 0 100%, 2% 82%, 16% 84%, 29% 74%);
+  }
+  40%{
+      clip-path: polygon(44% 67%, 67% 69%, 82% 67%, 99% 72%, 100% 100%, 47% 100%, 0 100%, 3% 79%, 16% 70%, 30% 69%);
+  }
+  50%{
+      clip-path: polygon(43% 47%, 64% 48%, 82% 38%, 99% 50%, 100% 100%, 47% 100%, 0 100%, 0 58%, 13% 44%, 26% 52%);
+  }
+  60%{
+      clip-path: polygon(47% 34%, 62% 41%, 83% 22%, 100% 36%, 100% 100%, 47% 100%, 0 100%, 0 48%, 14% 34%, 29% 41%);
+  }
+  70%{
+      clip-path: polygon(47% 27%, 63% 32%, 83% 25%, 100% 26%, 100% 100%, 47% 100%, 0 100%, 0 35%, 14% 29%, 31% 36%);
+  }
+  80%{
+      clip-path: polygon(52% 13%, 67% 20%, 84% 22%, 100% 13%, 100% 100%, 47% 100%, 0 100%, 0 23%, 14% 16%, 35% 20%);
+  }
+  90%{
+      clip-path: polygon(53% 9%, 71% 4%, 88% 11%, 100% 3%, 100% 100%, 47% 100%, 0 100%, 0 15%, 14% 19%, 32% 10%);
+  }
+  100%{
+      clip-path: polygon(67% 0, 76% 0, 91% 0, 100% 0, 100% 100%, 47% 100%, 0 100%, 0 0, 23% 0, 46% 0);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="box" >
+  <button type="submit">Click Me</button>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

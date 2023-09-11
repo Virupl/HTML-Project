@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build a Survey Form</title>
+  <style>
+    body {
+      background-color: #222;
+      font-family: Verdana;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 1px;
+      padding: 10px 20px;
+      text-align: center;
+      color: #fff;
+      background: #000;
+      max-width: 700px;
+      font-size: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    form {
+      background-color: #fff;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 30px 20px;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-control {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .form-control label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      padding: 10px;
+      display: block;
+      width: 95%;
+    }
+
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+    }
+
+    .button {
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #777;
+      border-radius: 2px;
+      font-family: inherit;
+      font-size: 21px;
+      font-weight: 700;
+      display: block;
+      width: 100%;
+      height: 40px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="form">
+    <!-- Create Form -->
+    <h1>Survey Form</h1>
+    <!-- Details -->
+
+    <div class="form-control">
+      <label for="name" id="label-name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+    </div>
+    <div class="form-control">
+      <label for="email" id="label-email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" />
+    </div>
+    <div class="form-control">
+      <label for="age" id="label-age">Age</label>
+      <input type="text" id="age" placeholder="Enter your age" />
+    </div>
+    <div class="form-control">
+      <label for="role" id="label-role">Which option best describes you?</label>
+      <!-- Dropdown options -->
+      <select name="role" id="role">
+        <option value="student">Student</option>
+        <option value="intern">Intern</option>
+        <option value="professional">Professional</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label>Would you recommend GeeksforGeeks to a friend?</label>
+      <label for="recommed-1">
+        <input type="radio" id="recommed recommed-1" name="recommed">Yes</input>
+      </label>
+      <label for="recommed-2">
+        <input type="radio" id="recommed recommed-2" name="recommed">No</input>
+      </label>
+      <label for="recommed-3">
+        <input type="radio" id="recommed recommed-3" name="recommed">Maybe</input>
+      </label>
+    </div>
+    <div class="form-control">
+      <label>Languages and Frameworks known
+        <small>(Check all that apply)</small>
+      </label>
+      <label for="inp-1">
+        <input type="checkbox" name="inp" id="check">C</input>
+      </label>
+      <label for="inp-2">
+        <input type="checkbox" name="inp" id="check">C++</input>
+      </label>
+      <label for="inp-3">
+        <input type="checkbox" name="inp" id="check">C#</input>
+      </label>
+      <label for="inp-4">
+        <input type="checkbox" name="inp" id="check">Java</input>
+      </label>
+      <label for="inp-5">
+        <input type="checkbox" name="inp" id="check">Python</input>
+      </label>
+      <label for="inp-6">
+        <input type="checkbox" name="inp" id="check">JavaScript</input>
+      </label>
+      <label for="inp-6">
+        <input type="checkbox" name="inp" id="check">HTML</input>
+      </label>
+      <label for="inp-6">
+        <input type="checkbox" name="inp" id="check">CSS</input>
+      </label>
+      <label for="inp-7">
+        <input type="checkbox" name="inp" id="check">React</input>
+      </label>
+      <label for="inp-7">
+        <input type="checkbox" name="inp" id="check">Angular</input>
+      </label>
+      <label for="inp-7">
+        <input type="checkbox" name="inp" id="check">Django</input>
+      </label>
+      <label for="inp-7">
+        <input type="checkbox" name="inp" id="check">Spring</input>
+      </label>
+    </div>
+    <div class="form-control">
+      <label for="comment">Any comments or suggestions</label>
+      <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+    </div>
+    <input type="submit" value="Submit" onclick="saveFile()" class="button" id="bt">
+  </form>
+</body>
+<script>
+  let saveFile = () => {
+
+    // Get the data from each element on the form.
+    const name = document.getElementById('name');
+    const age = document.getElementById('age');
+    const email = document.getElementById('email');
+    const role = document.getElementById('role');
+    const recom = document.getElementById('recommed');
+    //const recom2 = document.getElementById('recommed-2');
+    //const recom3 = document.getElementById('recommed-3');
+    const check = document.getElementById('check');
+    const comment = document.getElementById('comment');
+
+    // This variable stores all the data.
+    let formData =
+      '\r Name: ' + name.value + ' \r\n ' +
+      'Age: ' + age.value + ' \r\n ' +
+      'Email: ' + email.value + ' \r\n ' +
+      'I am : ' + role.value + ' \r\n ' +
+      'Recommed: ' + recom.value + ' \r\n ' +
+      'Languages and Frameworks known: ' + check.value + ' \r\n ' +
+      'Comment: ' + comment.value;
+
+    // Convert the text to BLOB.
+    const textToBLOB = new Blob([formData], { type: 'text/plain' });
+    const sFileName = 'surveyData.txt';	   // The file to save the data.
+
+    let newLink = document.createElement("a");
+    newLink.download = sFileName;
+
+    if (window.webkitURL != null) {
+      newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+    }
+    else {
+      newLink.href = window.URL.createObjectURL(textToBLOB);
+      newLink.style.display = "none";
+      document.body.appendChild(newLink);
+    }
+
+    newLink.click();
+  }
+</script>
+
+</html>

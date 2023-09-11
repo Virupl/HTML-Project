@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading</title>
+    <style type="text/css">
+      body {
+        background: #222;
+      }
+      .load {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        animation: jump 3s linear infinite;
+        -webkit-box-reflect: below 5px linear-gradient(transparent 70%, #222);
+      }
+      @keyframes jum {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(450px);
+        }
+      }
+      .load:before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        border: 10px solid #ddd;
+        border-top-color: #33cc99;
+        border-radius: 50%;
+        animation: 2s load linear infinite;
+      }
+
+      @keyframes load {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="load"></div>
+  </body>
+</html>

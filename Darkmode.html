@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+*{
+   transition: 0.9s ease-in-out;
+}
+:root
+{
+  --box: #fff;
+  --h1: #000;
+  --btn: #000;
+  --btnc: #fff;
+}
+body
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f00;
+}
+.box
+{
+  display: flex;
+  position:absolute;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  padding: 50px;
+  background: var(--box);
+  border-radius: 10px;
+  transition: 0.9s;
+}
+h1
+{
+  position:relative;
+  top: -50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--h1);
+  transition: 0.9s ease-in-out;
+}
+img
+{
+  position:absolute;
+  justify-content: center;
+  top: 80%;
+  width: 30px;
+  height: 30px;
+  cursor:pointer;
+  overflow:hidden;
+  transition: 0.7s ease-in-out;
+}
+.btn:active
+{
+  opacity: 0.9;
+}
+.light-theme
+{
+  --box: #fff;
+  --h1: #000;
+  --btn: #000;
+  --btnc: #fff;
+}
+.dark-theme
+{
+  --box: #000;
+  --h1: #fff;
+  --btn: #fff;
+  --btnc: #000;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+  <h1 id="head" >Dark Mode</h1>
+     <img src="./moon.png" id="icon">
+</div>
+
+
+<script type="text/javascript">
+
+var button = document.getElementById("icon");
+
+button.onclick = function(){
+   document.body.classList.toggle("dark-theme");
+   if(document.body.classList.contains("dark-theme")){
+        button.src = "./sun.png";
+        document.getElementById("head").innerHTML = "Dark Mode";
+   }else{
+        button.src = "./moon.png";
+        document.getElementById("head").innerHTML = "Light Mode";
+   }
+}
+
+</script>
+</body>
+</html>

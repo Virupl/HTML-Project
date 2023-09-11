@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style type="text/css">
+body
+{
+   min-height: 100vh;
+   background-image: linear-gradient(to top left, red, black);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.box
+{
+   text-align:center;
+}
+.box a
+{
+   text-decoration: none;
+   color: #fff;
+   font-size: 30px;
+   font-weight: bold;
+   position:relative;
+   cursor:pointer;
+   padding: 3px 0;
+   border-bottom: 3px dotted #f00;
+}
+.box a:before
+{
+  content: attr(data-info);
+  position:absolute;
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  background: rgba(24,24,24,0.8);
+  color: #fff;
+  border-radius: 10px;
+  opacity: 0;
+  transform:translateY(0px);
+  transition: 0.2s all cubic-bezier(0.17, 0.88);
+}
+.box a:after
+{
+  position:absolute;
+  content: '';
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(14,14,14,0.8);
+  left: 42%;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+.box a:hover
+{
+   text-shadow: 0 0 5px #fff, 0 0 8px #f00, 0 0 10px #f0f;
+}
+.box a:hover:before
+{
+  opacity: 1;
+  transform:translateY(-62px);
+  animation: linked 0.8s infinite ease-in-out;
+}
+.box a:hover:after
+{
+  opacity: 1;
+  transform:translateY(-17px);
+}
+@keyframes linked
+{
+  0%, 100%{ transform: translateY(-62px);}
+  50%{ transform:translateY(-100px);}
+}
+/*
+.box a:active:before
+{
+  opacity: 1;
+  transform:translateY(-62px);
+}
+.box a:active:after
+{
+  opacity: 1;
+  transform:translateY(-17px);
+}*/
+
+</style>
+</head>
+<body>
+
+<div class="box" >
+  <a href="#!" data-info="Learn From LearnVern" >WWW.LEARNVERN.COM</a>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

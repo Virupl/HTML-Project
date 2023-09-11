@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Listing</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglisting1 {
+        padding: 15px 30px;
+      }
+
+      .anythinglisting1 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglisting1 ul li {
+        position: relative;
+        font-size: 16px;
+        padding: 5px 0 5px 20px;
+      }
+
+      .anythinglisting1 ul li::before {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background: #0bf;
+        left: 0;
+        top: 8px;
+        content: "";
+        border-radius: 50%;
+      }
+
+      /* listing2  */
+      .anythinglisting2 {
+        padding: 15px 30px;
+      }
+
+      .anythinglisting2 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglisting2 ul li {
+        position: relative;
+        font-size: 16px;
+        padding: 5px 0 5px 20px;
+      }
+
+      .anythinglisting2 ul li::before {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        background: #0b6;
+        left: 0;
+        top: 8px;
+        content: "";
+      }
+
+      /* listing3  */
+      .anythinglisting3 {
+        padding: 15px 30px;
+      }
+
+      .anythinglisting3 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglisting3 ul li {
+        position: relative;
+        font-size: 16px;
+        padding: 5px 0 5px 20px;
+      }
+
+      .anythinglisting3 ul li::before {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        left: 0;
+        top: 8px;
+        content: "";
+        border-right: 2px solid #0bf;
+        border-top: 2px solid #0bf;
+        transform: rotate(45deg);
+      }
+      /* listing3  */
+      .anythinglisting4 {
+        padding: 15px 30px;
+      }
+
+      .anythinglisting4 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        counter-reset: number;
+        position: relative;
+      }
+
+      .anythinglisting4 ul::before {
+        border-left: 4px solid #0bf;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 17px;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .anythinglisting4 ul li {
+        position: relative;
+        font-size: 16px;
+        color: #000;
+        padding: 15px 0 15px 50px;
+      }
+
+      .anythinglisting4 ul li::before {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: #0bf;
+        left: 0;
+        text-align: center;
+        top: 8px;
+        content: "";
+        border-radius: 50%;
+        counter-increment: number;
+        color: #fff;
+        content: counter(number);
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      /* listing5  */
+      .anythinglisting5 {
+        padding: 15px 30px;
+      }
+
+      .anythinglisting5 ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglisting5 ul li {
+        position: relative;
+        font-size: 16px;
+        padding: 5px 0 5px 20px;
+      }
+
+      .anythinglisting5 ul li::before {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        left: 0;
+        top: 8px;
+        content: "";
+        border-right: 2px solid #0bf;
+        border-top: 2px solid #0bf;
+        transform: rotate(45deg);
+      }
+
+      .anythinglisting5 ul li a {
+        color: #000;
+        text-decoration: none;
+        transition: all 0.5s;
+      }
+
+      .anythinglisting5 ul li a:hover {
+        color: #0b6;
+        font-weight: 700;
+        transition: all 0.5s;
+      }
+
+      /* listingNormal  */
+      .anythinglistingNormal {
+        padding: 15px 30px;
+      }
+
+      .anythinglistingNormal ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglistingNormal ul li {
+        font-size: 16px;
+      }
+
+      /* listingNormalOL  */
+      .anythinglistingNormalOL {
+        padding: 15px;
+      }
+
+      .anythinglistingNormal ol {
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglistingNormal ol li {
+        font-size: 16px;
+      }
+
+      /* listingDldt  */
+      .anythinglistinglddt {
+        padding: 15px 30px;
+      }
+
+      .anythinglistinglddt dt {
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      /* listing image  */
+      .anythinglistingImage {
+        padding: 15px 30px;
+      }
+
+      .anythinglistingImage ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglistingImage ul li {
+        list-style: url("rose.png");
+        font-size: 16px;
+        padding: 5px 0 5px 0px;
+        margin-left: 30px;
+      }
+
+      /* listing image with background  */
+      .anythinglistingImageBackground {
+        padding: 15px 30px;
+      }
+
+      .anythinglistingImageBackground ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .anythinglistingImageBackground ul li {
+        background: url(rose.png) no-repeat 0 0;
+        font-size: 16px;
+        padding: 15px 0 15px 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="anythinglisting1">
+      <ul>
+        <li>Angular</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>SASS</li>
+        <li>AMP</li>
+      </ul>
+    </div>
+    <div class="anythinglisting2">
+      <ul>
+        <li>Angular</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>SASS</li>
+        <li>AMP</li>
+      </ul>
+    </div>
+    <div class="anythinglisting3">
+      <ul>
+        <li>Anjsjr</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>SASS</li>
+        <li>AMP</li>
+      </ul>
+    </div>
+    <div class="anythinglisting4">
+      <ul>
+        <li>Angular</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>SASS</li>
+        <li>AMP</li>
+      </ul>
+    </div>
+    <div class="anythinglisting5">
+      <ul>
+        <li><a href="#">Angular</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">React js</a></li>
+        <li><a href="#">SASS</a></li>
+        <li><a href="#">AMP</a></li>
+      </ul>
+    </div>
+    <div class="anythinglistingNormal">
+      <ul>
+        <li>Angular</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>SASS</li>
+        <li>AMP</li>
+      </ul>
+    </div>
+    <ul style="list-style-type: circle">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ul>
+    <ul style="list-style-type: square">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ul>
+    <ul style="list-style: none">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ul>
+    <div class="anythinglistingNormalOL">
+      <ol>
+        <li>Angular</li>
+        <li>Javascript</li>
+        <li>React js</li>
+        <li>SASS</li>
+        <li>AMP</li>
+      </ol>
+    </div>
+    <ol type="1">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+    <ol start="50">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+    <ol type="A">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+    <ol type="A" start="7">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+    <ol type="a">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+    <ol type="i">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+    <ol type="I">
+      <li>Angular</li>
+      <li>Javascript</li>
+      <li>React js</li>
+    </ol>
+  </body>
+</html>

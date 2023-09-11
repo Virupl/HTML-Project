@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>---</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background: #222;
+      }
+      .box {
+        width: 100px;
+        height: 600px;
+        background: transparent;
+        display: grid;
+        justify-content: center;
+        transform: rotateZ(10deg);
+      }
+      .handal {
+        position: relative;
+        width: 30px;
+        height: 120px;
+        background: #f0f;
+        margin-top: 450px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 0 5px 1px #fff;
+        display: grid;
+        justify-content: center;
+      }
+      .handal:before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 0px;
+        background: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 0px;
+        transform: rotate(0deg);
+        opacity: 0;
+        transition: 1s;
+      }
+      .handal:hover.handal:before {
+        opacity: 1;
+        height: 450px;
+        margin-top: -450px;
+        box-shadow: 0 0 5px 1px #fff, 0 0 5px 2px #ff0, 0 0 5px 3px #fff;
+      }
+      .handal:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background: #ff0;
+      }
+      .btn {
+        width: 20px;
+        height: 20px;
+        background: #00f;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 2px #fff;
+        margin-top: 50px;
+        position: relative;
+      }
+      .btn:before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        background: #0ff;
+        margin-top: 30px;
+        margin-left: -5px;
+      }
+      .btn:after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        background: #0ff;
+        margin-top: -15px;
+        margin-left: -5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="handal">
+        <div class="btn"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript"></script>
+  </body>
+</html>
